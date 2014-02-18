@@ -59,9 +59,10 @@ namespace Maze
             for (int i = 0; i < neghbors.GetLength(0); i++)
                 if (neghbors[i] == 1) validNList.Add(i);
             // if there is a valid neghbor, choose one at random to progress to
+
             if (validNList.Count > 0)
             {
-                int nextDir = _rng.Next(validNList.Count);
+                int nextDir = validNList[_rng.Next(validNList.Count)];
                 if ((Wall)nextDir == Wall.North)
                 {
                     north++;

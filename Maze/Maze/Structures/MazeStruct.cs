@@ -66,12 +66,12 @@ namespace Maze.Structures
         private bool getNeighborStatus(Vector2 cell, int dir)
         {
             if ((Wall)dir == Wall.North)
-                if (cell.Y + 2 < CellArray.GetLength(1))
+                if (cell.Y + 1 < CellArray.GetLength(1))
                     return CellArray[(int)cell.X, (int)cell.Y + 1].Visited;
                 else return true;
             else if ((Wall)dir == Wall.East)
-                if (cell.X + 2 < CellArray.GetLength(0))
-                    return CellArray[(int)cell.X + 1, (int)cell.Y].Visited;
+                if (cell.X + 1 < CellArray.GetLength(0))                                  
+                    return CellArray[(int)cell.X + 1, (int)cell.Y].Visited;             
                 else return true;
             else if ((Wall)dir == Wall.South)
                 if (cell.Y - 1 > 0) 
