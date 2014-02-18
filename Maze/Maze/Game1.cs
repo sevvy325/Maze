@@ -41,8 +41,7 @@ namespace Maze
 
             base.Initialize();
             mGen = new MazeGen();
-            //mTex = ArraytoTex.Convert(GraphicsDevice, mGen.mArray);
-            //SaveImg(mTex);
+            mTex = ArraytoTex.Convert(GraphicsDevice, mGen.maze.CellArray);
         }
 
         /// <summary>

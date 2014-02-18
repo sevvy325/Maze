@@ -11,6 +11,8 @@ namespace Maze.Structures
 
         public Cell[,] CellArray { get; private set; }
 
+        public int vCount = 0;
+
         public Vector2 Dimensions { get; private set; }
 
         /// <summary>
@@ -32,11 +34,13 @@ namespace Maze.Structures
 
         public void visit(Vector2 cellLocation)
         {
+            vCount++;
             CellArray[(int)cellLocation.X, (int)cellLocation.Y].Visited = true;
         }
 
         public void visitAndLower(Vector2 cellLocation, Wall eWall)
         {
+            vCount++;
             CellArray[(int)cellLocation.X, (int)cellLocation.Y].Visited = true;
             CellArray[(int)cellLocation.X, (int)cellLocation.Y].Walls[(int)eWall] = false;
         }
