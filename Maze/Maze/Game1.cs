@@ -41,7 +41,7 @@ namespace Maze
 
             base.Initialize();
             mGen = new MazeGen();
-            mTex = mGen.maze.CellArray[0, 0].Texture;
+            mTex = mGen.maze.CellArray[20, 10].Texture;
         }
 
         /// <summary>

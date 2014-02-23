@@ -49,7 +49,7 @@ namespace Maze.Structures
             Walls = new bool[4];
 
             // Set all walls up
-            for (int i = 0; i < Walls.GetLength(0); i++) Walls[i] = false;
+            for (int i = 0; i < Walls.GetLength(0); i++) Walls[i] = true;
             // Set Cell as unvisited
             Visited = false;
         }
