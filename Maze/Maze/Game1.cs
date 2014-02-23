@@ -17,7 +17,7 @@ namespace Maze
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
+        public static GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         ArraytoTex conv;
         MazeGen mGen;
@@ -41,7 +41,7 @@ namespace Maze
 
             base.Initialize();
             mGen = new MazeGen();
-            mTex = ArraytoTex.Convert(GraphicsDevice, mGen.maze.CellArray);
+            mTex = mGen.maze.CellArray[0, 0].Texture;
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Maze
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            Rectangle destRect = new Rectangle(0, 0, 200, 200);
+            Rectangle destRect = new Rectangle(0, 0, 10, 10);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
